@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //Display of tables
 public class TabGame {
-    public static void main(String[] args) {
+    public static void displayTab(String[] args) {
         int[][] easy;
         int[][] medium;
         int[][] hard;
