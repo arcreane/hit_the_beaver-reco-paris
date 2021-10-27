@@ -19,6 +19,7 @@ public class Menu {
             case "s" -> ChoicePlayer.displayMainMenu();
             case "v" -> ChoicePlayer.displayMainMenu();
             case "q" -> ChoicePlayer.displayMainMenu();
+
         }
 
 
