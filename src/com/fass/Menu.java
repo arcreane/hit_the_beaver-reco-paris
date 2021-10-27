@@ -3,6 +3,7 @@ package com.fass;
 import java.util.Locale;
 import java.util.Scanner;
 
+//Creation of the game menu
 public class Menu {
     public static void displayMainMenu() {
         System.out.println("Welcome to the Hit The Beaver 🔨💥");

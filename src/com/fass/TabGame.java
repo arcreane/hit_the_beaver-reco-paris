@@ -2,45 +2,44 @@ package com.fass;
 
 import java.util.Scanner;
 
-//Display of tables
+//Creation of the table with the choice of size
 public class TabGame {
-    public static void displayTab(String[] args) {
-        int[][] easy;
-        int[][] medium;
-        int[][] hard;
-        int x, y;
+    public static void displayTab(int choice) {
+        //Choice of table size
+        String[][] array;
+        int width = 0;
 
-        easy = new int[5][5];
-        for (int i = 0;i < easy.length; i++) {
-            for (int j = 0;j < easy[i].length;j++) {
-                easy[i][j] = i + j;
-                if (i == 0 || j == 0)
-                System.out.print(easy[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
+        if (choice == 0)
+            width = 5;
+        else if (choice == 1)
+            width = 7;
+        else if (choice == 2)
+            width = 10;
 
-        medium = new int[7][7];
-        for (int i = 0;i < medium.length; i++) {
-            for (int j = 0;j < medium[i].length;j++) {
-                medium[i][j] = i + j;
-                if (i == 0 || j == 0)
-                System.out.print(medium[i][j] + " ");
+        //array initialization
+        array = new String[ width][width];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = "  ";
             }
-            System.out.println();
         }
-        System.out.println();
 
-        hard = new int[10][10];
-        for (int i = 0;i < hard.length; i++) {
-            for (int j = 0;j < hard[i].length;j++) {
-                hard[i][j] = i + j;
-                if (i == 0 || j == 0)
-                System.out.print(hard[i][j] + " ");
+        //table display
+        StringBuilder gridContent = new StringBuilder();
+        //array[8][6] = "M ";
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i == 0)
+                    gridContent.append(j + " ");
+                else if (j == 0)
+                    gridContent.append(i + " ");
+                else
+                    gridContent.append(array[i][j]);
             }
-            System.out.println();
+            gridContent.append("\n");
         }
-        System.out.println();
+        //array[8][6] = "  ";
+
+        System.out.println(gridContent.toString());
     }
 }
