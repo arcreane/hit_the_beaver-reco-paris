@@ -2,6 +2,7 @@ package com.fass;
 
 import java.util.Scanner;
 
+//Creation of the game menu
 public class Menu {
     public static void displayMainMenu() {
         System.out.println("Make your choice");
