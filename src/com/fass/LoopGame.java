@@ -5,7 +5,16 @@ import java.lang.Math;
 
 //Creation of loops to show the beaver and the timer
 public class LoopGame {
-    // generate random number
+        public static void displayLoop() {
+            System.out.println("choose the coordinates to type the beaver - x, y");
+            TabGame.displayTab();
+
+
+            // generate random number
+            int r = 10;
+
+            System.out.println(Math.round(r));
+        }
     /*static double i = Math.random();
     static double j = Math.random();
 

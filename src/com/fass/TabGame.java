@@ -2,13 +2,13 @@ package com.fass;
 
 import java.lang.Math;
 import java.util.Random;
+
 //Creation of the table with the choice of size
 public class TabGame {
-    double x = (int)(Math.random()*11);
-    double y = (int)(Math.random()*11);
-    static Object Beaver = "B";
     static String[][] array;
-
+    //static int width = 0;
+    //static int x = (int)(Math.random()*width);
+    //static int y = (int)(Math.random()*width);
     public static void displayTabCreate(int choice) {
         //Choice of table size
         int width = 0;
@@ -20,11 +20,17 @@ public class TabGame {
         else if (choice == 2)
             width = 11;
 
+        int x = (int)(Math.random()*width);
+        int y = (int)(Math.random()*width);
+
         //array initialization
         array = new String[width][width];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = "  ";
+                if (i == x && j == y)
+                    array[i][j] = "B";
+                else
+                    array[i][j] = "  ";
             }
         }
 
@@ -49,14 +55,8 @@ public class TabGame {
             //show the beaver
 
             StringBuilder gridContent = new StringBuilder();
-            double x = (int)(Math.random()*11);
-            double y = (int)(Math.random()*11);
-            Beaver = "B";
-
-                for (int u = 0; u < 10; u++ ){
-                        gridContent.append(Beaver);
-
-
+            //double x = (int)(Math.random()*11);
+            //double y = (int)(Math.random()*11);
                     for (int i = 0; i < array.length; i++) {
                         for (int j = 0; j < array[i].length; j++) {
                             if (i == 0)
@@ -64,14 +64,12 @@ public class TabGame {
                             else if (j == 0)
                                 gridContent.append(j + " ");
                             else
-                                gridContent.append(array[i][j] + Beaver);
+                                gridContent.append(array[i][j]);
                         }
+                        gridContent.append("\n");
                     }
-                }
-                gridContent.append("\n");
+                    System.out.println(gridContent.toString());
             //}
             //array[i][j] = "B";
-            System.out.println(gridContent.toString() + Beaver);
-            System.out.println(x+y);
         }
     }
