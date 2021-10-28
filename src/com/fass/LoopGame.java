@@ -6,7 +6,7 @@ import java.lang.Math;
 //Creation of loops to show the beaver and the timer
 public class LoopGame {
     // generate random number
-    /*static double i = Math.random();
+    static double i = Math.random();
     static double j = Math.random();
 
     static String Beaver = "B";
@@ -18,8 +18,8 @@ public class LoopGame {
           System.out.println(j);
           j++;
 
-        }*/
-        /*String[][] array;
+        }
+        String[][] array;
          int width = 1;
 
         //array initialization
@@ -29,6 +29,6 @@ public class LoopGame {
                         array[i][j] = "  ";
                     }
                 }
-        Random rand = new Random(10);*/
+        Random rand = new Random(10);
     }
 

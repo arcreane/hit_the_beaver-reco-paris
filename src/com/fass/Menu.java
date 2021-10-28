@@ -1,5 +1,4 @@
 package com.fass;
-
 import java.util.Locale;
 import java.util.Scanner;
 // creation of the class menu
