@@ -1,7 +1,8 @@
 package com.fass;
+
 import java.util.Locale;
 import java.util.Scanner;
-// creation of the class menu
+
 //Creation of the game menu
 public class Menu {
     public static void displayMainMenu() {
@@ -16,11 +17,10 @@ public class Menu {
         selection = selection.toLowerCase();
         switch (selection) {
             case "s" -> ChoicePlayer.displayMainMenu();
-            case "v" -> ChoicePlayer.displayMainMenu();
+            case "v" -> Scores.display_score();
             case "q" -> ChoicePlayer.displayMainMenu();
 
         }
-
 
     }
 
