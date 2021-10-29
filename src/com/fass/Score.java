@@ -40,100 +40,35 @@ public class Score {
             if (nbScoreEntered < 5) {
                 scores_Array[nbScoreEntered + 1][0] = "name";
                 scores_Array[nbScoreEntered + 1][1] = newHighScore + "";
+
             }
+
             //Sinon on ne fait rien, le tableau est plein et le score est trop faible
-        }
-        //Le score est plus grand que le plus petit des highscore,
-        //on doit l'insérer dans le tableau
-        else {
-            for (int i = nbScoreEntered; i >=0; i--) {
-               // if
-            }
-          //      Integer.valueOf(scores_Array[nbScoreEntered][1])
-            }
-            //D'abord trouver où l'insérer
 
-            //Ensuite décaler chaque score plus petit que le nouveau score
-            //à la ligne suivante (Si il reste des slots libres on se place dessus pour le
-            //début de notre boucle, sinon on se place sur la derniere ligne de notre tableau)
-
-
-            //Et enfin entrer le nouveau score à l'index qui a été trouvé précédemment
-        }
+            // si le score est plus grand que le plus petit des highscore,
+            else {
+                //on doit l'insérer dans le tableau (à la place du petit score qui devra etre decale
+                // vers le bas
+                for (int i = nbScoreEntered; i >= 0; i--) {
+                    int indexMin = -1;
+                    if (Integer.valueOf(scores_Array[i][1]) < newHighScore) {
+                        if (Integer.valueOf(scores_Array[i][1]) < indexMin) {
+                            indexMin = i;
+                        }
+                        for (int j = indexMin; j > nbScoreEntered; i--) {
+                            scores_Array[j][1] = scores_Array[i - 1][1];
 
 
-//    int round_number_done = 0;
-//    int new_score = 10;
-//    int top5_case_number = 5;
-//
-//            for(i=1,i<round_number_done, i++)
-//
-//    {
-//        if (scores_Array[i][2].equals(".")) {
-//            scores_Array[i][2] = new_score;
-//            round_number_done++;
-//        } else {
-//            sortArray()
-//
-//        }
-//
-//
-//    }
+                        }
 
+                        newHighScore = Integer.valueOf(scores_Array[indexMin][1]);
 
-//
-//    private static void setupHighScores ( ) {
-//        // trouver la valeur la plus petite du tableau:
-//
-//        int min = 0;
-//        for (int i = 0; i < round_number_done; i++) {
-//            for (int j = i + 1; j < round_number_done - 1; i++) {
-//                if (scores[i] < scores[j] && scores[i] < min) {
-//                    min.equals( scores[i]);
-//                }
-//            }
-//        }
-
-    // ajouter les prénom dans le tableau si le joueur souhaite que son score soit dans le top 5
-    // et si le score est suffisament haut (Amal)
-/*
-    private static void choixAffichageTop5Joueur() {
-
-
-        Scanner scannerChoix = new scanner(System.in);
-        System.out.println("Voulez vous enregistrer votre score dans le top 5 ? Yes/No");
-        Str choix = scanner.nextIn();
-
-        if (choix("Yes") {
-            Scanner prenom = new Scanner(System.in);
-            System.out.println("Quel est votre prénom ? " +);
-            String pseudo = scanner.next();
-            sortArray();
-        }
-
-        // remplacer la valeur la plus petite par le nouveau score si il est supérieur
-
-        if (min < new_score) {
-            min = new_score
-        }
-
-        // trier le tableau
-        private static void sortArray () {
-
-            for (i = t[top5_case_number], i = 0, i++) {
-                for (j = t[i - 1], j = t[i - 1], i++) {
-                    if (t[j] < t[i]) {
-                        tmp = t[i];
-                        t[i] = t[j];
-                        t[j] = tmp;
                     }
+
+
                 }
-            }*/
+
+            }
         }
-
-
-        // mettre en ligne le top 5 du meilleur score au plus bas
-
-
-
-
+    }
+}
