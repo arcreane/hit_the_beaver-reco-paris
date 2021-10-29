@@ -25,7 +25,8 @@ public class LoopGame {
                     }
                 }
             }
-            //Send Score to highscore
+            //Fin de la boucle de jeu la partie est finie et on connait le score
+            HighScores.enterNewHightScore(score);
         }
     }
 
