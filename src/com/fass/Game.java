@@ -4,7 +4,7 @@ public class Game {
 
     //File that displays the game
     public static void main(String[] args) {
+        HighScores.setupHighScores();
         Menu.displayMainMenu();
-        LoopGame.displayLoop();
     }
 }

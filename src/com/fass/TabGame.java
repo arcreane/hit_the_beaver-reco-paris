@@ -51,7 +51,7 @@ public class TabGame {
         System.out.println(gridContent.toString());
     }
 
-        public static void displayTab() {
+        public static void displayTab(int difficulty) {
             //show the beaver
 
             StringBuilder gridContent = new StringBuilder();

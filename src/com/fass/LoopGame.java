@@ -5,15 +5,21 @@ import java.lang.Math;
 
 //Creation of loops to show the beaver and the timer
 public class LoopGame {
-        public static void displayLoop() {
+        public static void play() {
+            int score = 0;
             System.out.println("choose the coordinates to type the beaver - x, y");
-            TabGame.displayTab();
+
+            //La boucle de jeu
+            TabGame.displayTab(0);
 
 
             // generate random number
             int r = 10;
 
             System.out.println(Math.round(r));
+
+            //Fin de la boucle de jeu la partie est finie et on connait le score
+            HighScores.enterNewHightScore(score);
         }
     /*static double i = Math.random();
     static double j = Math.random();
